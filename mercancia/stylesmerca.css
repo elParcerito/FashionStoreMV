@@ -1,0 +1,102 @@
+    body {
+      background: linear-gradient(135deg, #fff5fa, #f3e5ff);
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff80c0, #a080ff);
+      padding: 1rem;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      text-shadow: 1px 1px 8px rgba(255,255,255,0.6);
+    }
+
+    nav a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: white;
+      color: #7b4eff;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #7b4eff;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    img {
+      margin-top: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.5s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    .cuadro {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+      padding: 2rem;
+      margin: 3rem auto;
+      max-width: 500px;
+      text-align: left;
+      animation: slideUp 1s ease-out;
+    }
+
+    .cuadro h2 {
+      color: #7b4eff;
+      margin-bottom: 0.5rem;
+    }
+
+    .cuadro h3 {
+      color: #ff0080;
+      margin-top: 1.5rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .linea-superior {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(to right, #ff0080, #c671ff, #2200ff, #a600ff, #ff0080);
+      background-size: 200% 100%;
+      animation: lineaAnimada 8s linear infinite;
+      z-index: 9999;
+    }
+
+    @keyframes lineaAnimada {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 100% 0%; }
+    }
