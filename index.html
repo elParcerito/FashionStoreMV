@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="img/wlogo/Logo FashionStore.png" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FashionStore M&V🌸💜</title>
+        <link rel="stylesheet" href="recursos/css/index.css">
+    </head>
+    <body>
+        <div class="linea-superior"></div>
+
+        <header>
+            <img src="recursos/img/wlogo/Logo FashionStore.png" alt="Logo FashionStore" width="110" height="110" class="logo">
+            <h1>Bienvenido a <span>FashionStore M&V</span></h1>
+            <p>Descubre nuestro catálogo de ropa para <b><u>Mujer</u></b> y <b><u>Hombre</u></b>.</p>
+        </header>
+
+        <div class="contenedor">
+            <a href="#mujer" class="rectangulo">Sección Mujer</a>
+            <a href="#hombre" class="rectangulo">Sección hombre</a>
+        </div>
+        <!--barra de busqueda-->
+        <div class="buscador">
+            <input type="text" id="searchInput" placeholder="Buscar producto... 🔍">
+        </div>
+
+        <!-- Sección Mujer -->
+         <div id="mujer" class="categoria">
+            <h2 style="text-align: center; background-color: #ffbce7;">Mujer:</h2>
+            <section class="menu">
+                
+                <div class="menu-item">
+                    <a href="productos/enterizos/mujer/EnterizoCortoDeFormula1Negro.html">
+                        <div class="img-container">
+                            <img src="recursos/img/enterizos/mujer/EnterizoCortoDeFormula1Negro.jpeg" alt="Enterizo Corto De Fórmula 1 Negro">
+                            <div class="overlay">Ver Detalles</div>
+                        </div>
+                        <h3>Enterizo Corto De Fórmula 1 Negro</h3>
+                        <h3>$</h3>
+                    </a>
+                </div>
+
+                <div class="menu-item">
+                    <a href="productos/conjuntos/mujer/ConjuntoDeportivoOriginal.html">
+                        <div class="img-container">
+                            <img src="recursos/img/conjuntos/mujer/ConjuntoDeportivoOriginal.jpeg" alt="Conjunto Deportivo Original">
+                            <div class="overlay">Ver Detalles</div>
+                        </div>
+                        <h3>Conjunto Deportivo Original</h3>
+                        <h3>$</h3>
+                    </a>
+                </div>
+
+                <div class="menu-item">
+                    <a href="productos/enterizos/mujer/EnterizoCortoDeFormula1Rojo.html">
+                        <div class="img-container">
+                            <img src="recursos/img/enterizos/mujer/EnterizoLargoDeFormula1Rojo.jpeg" alt="Enterizo Largo De Formula 1 Rojo">
+                            <div class="overlay">Ver Detalles</div>
+                        </div>
+                        <h3>Enterizo Corto De Formula 1 Rojo</h3>
+                        <h3>$</h3>
+                    </a>
+                </div>
+
+            </section>
+         </div>
+
+        <!-- Seccion Hombre-->
+         <div id="hombre" class="categoria">
+            <h2 style="text-align: center; background-color: #a2acff;">Hombre:</h2>
+            <section class="menu">
+                <!-- Vestimentas-->
+                <div class="menu-item">
+                    <a href="productos/conjuntos/hombre/ConjuntoDeNiño.html">
+                        <div class="img-container">
+                            <img src="recursos/img/conjuntos/hombre/ConjuntoDeNiño.jpeg" alt="Conjunto De Niño">
+                            <div class="overlay">Ver Detalles</div>
+                        </div>
+                        <h3>Conjunto De Niño</h3>
+                        <h3>$</h3>
+                    </a>
+                </div>
+
+            </section>
+         </div>
+
+         <section class="creditos">
+            <h3>Para Obtener Más Información Ingresa Al Siguiente Canal:</h3>
+            <div class="link">
+                <a href="https://whatsapp.com/channel/0029VbBSoksISTkJGZYDiK1l" class="rectangulo">Sigue el canal de FashionStore M&V 💜</a>
+            </div>
+         </section>
+
+         <script>
+            const searchInput = document.getElementById('searchInput');
+            const productos = document.querySelectorAll('.menu-item');
+
+            searchInput.addEventListener('input', () => {
+                const filtro = searchInput.value.toLowerCase();
+                productos.forEach(producto => {
+                    const nombre = producto.innerText.toLowerCase();
+                    producto.style.display = nombre.includes(filtro) ? '' : 'none';
+                });
+            });
+         </script>
+    </body>
+</html>
